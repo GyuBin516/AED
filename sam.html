@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                const response = new DOMParser().parseFromString(xhr.responseText, 'text/xml');
+                console.log(response);
+
+                const firstItem = response.querySelector('response > body > items > item');
+                console.log(firstItem);
+            }
+        }
+    };
+    xhr.open('GET', 'http://apis.data.go.kr/B552657/AEDInfoInqireService/getAedLcinfoInqire?serviceKey=8b0aFRZp5USoab0IxfLClNWrx1L1v06Dx8awjJSOU5zfXsl3T9ogvBdgtOB1VRlwJhz6ISVMl%2F5%2BLP651RUXMw%3D%3D&WGS84_LON=127.7154055&WGS84_LAT=37.81751788&resultType=json&pageNo=1&numOfRows=1000');
+    xhr.send();
+</script>
+</body>
+</html>

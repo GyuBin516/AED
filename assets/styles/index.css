@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@import "./index/console.css";
+@import "./index/map.css";
+@import "./index/modal.css";
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

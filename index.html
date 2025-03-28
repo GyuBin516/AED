@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>주변 자동심장충격기(AED)</title>
+    <link href="./assets/images/logo.png" rel="icon" type="image/png">
+    <link href="./assets/styles/common.css" rel="stylesheet" type="text/css">
+    <link href="./assets/styles/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc3e656874f2d386a875b0146d9cf5fc&libraries=services"></script>
+    <script defer src="./assets/scripts/index.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">자동심장충격기(AED) 정보</h2>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead id="modalHead">
+                            <tr class="tr-th">
+                                <th class="th-info">설치장소</th>
+                                <th class="th-address">설치주소</th>
+                                <th class="th-tel">설치기관 연락처</th>
+                            </tr>
+                        </thead>
+                        <tbody id="modalBody">
+                            <tr class="tr-td">
+                                <td class="td-info">1층 안내데스크 옆</td>
+                                <td class="td-address">조정대로 111, 하남시 청소년 수련관 (풍산동)</td>
+                                <td class="td-tel">031-699-8253</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-close">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="console">
+    <h2 class="caption">주변 자동심장충격기(AED) 찾기</h2>
+    <div class="logo">
+        <img alt="" class="image" src="./assets/images/logo.png">
+        <form novalidate class="location-form">
+            <label class="label search">
+                <span class="row">
+                    <input required autocomplete="off" class="obj-input input" name="search-input" maxlength="250" minlength="10" type="text" placeholder="시/군/구/동 검색" id="search-input">
+                    <button class="obj-button button" name="search-button" type="button" id="search-button">
+                        <img alt="" class="icon" src="./assets/images/search.png">
+                        <span class="tooltip">동네 검색</span>
+                    </button>
+                </span>
+            </label>
+        </form>
+        <img alt="" class="img" src="./assets/images/question-mark.png">
+        <div class="content">
+            <div class="title">주소 입력방법 안내</div>
+            <div class="address-info">
+                <div class="column">
+                    <span class="caption">정확한 주소를 모르시는 경우</span>
+                    <ul class="list">
+                        <li class="item">
+                            시/군/구 + 도로명, 동명
+                            <br>
+                            <strong>
+                                예) 동해시 중앙로, 여수 중앙동
+                            </strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <span class="caption">정확한 주소를 아시는 경우</span>
+                    <ul class="list">
+                        <li class="item">
+                            도로명 + 건물번호
+                            <strong>
+                                예) 종로 6
+                            </strong>
+                        </li>
+                        <li class="item">
+                            읍/면/동/리 + 지번
+                            <strong>
+                                예) 서린동 154-1
+                            </strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="map"></div>
+</body>
+</html>
